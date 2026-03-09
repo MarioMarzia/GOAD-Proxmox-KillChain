@@ -11,7 +11,9 @@ Unlike standard local deployments, this GOAD environment was built from scratch 
 
 ## 🔗 Resources
 **[Step-by-Step Tutorial on Medium](https://medium.com/@mariomarzia007/building-an-enterprise-active-directory-cyber-range-goad-on-a-repurposed-3-node-proxmox-cluster-9adf44de2848)**: Learn how to build this infrastructure using Terraform, Packer, and Ansible, including solutions for VXLAN MTU fragmentation and pfSense firewalling.
+
 **[Kill Chain Demonstration on YouTube](https://youtu.be/dHV7ubUkCEw?si=dRTr3WHrtKAJmqLV)**: Watch the execution of the full attack path, from initial access to total forest compromise.
+
 **[Technical Report (PDF)](GOAD_progetto.pdf)**: Download the detailed Italian technical report (`GOAD_progetto.pdf`) included in this repository.
 
 ## ⚔️ Attack Path & Techniques Demonstrated

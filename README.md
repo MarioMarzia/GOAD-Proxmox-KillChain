@@ -20,11 +20,17 @@ Unlike standard local deployments, this GOAD environment was built from scratch 
 The offensive phase of this project covers a full Active Directory Kill Chain, mapped to real-world Advanced Persistent Threat (APT) behaviors:
 
 **Reconnaissance:** Enumerating SMB shares and identifying Domain Controllers vs. Member Servers using `NetExec` based on SMB Signing status.
+
 **Initial Access (LLMNR Poisoning):** Intercepting broadcast name resolution requests with `Responder` to capture NTLMv2 hashes.
+
 **Credential Cracking:** Performing offline dictionary attacks using `Hashcat` to crack the captured NetNTLMv2 hashes.
+
 **Enumeration & Lateral Movement:** Utilizing `BloodHound` to analyze AD ACLs and discover a hidden "Shortest Path" to Domain Admin via local administrator privileges.
+
 **Domain Dominance (Golden Ticket):** Dumping the `NTDS.dit` remotely, extracting the `krbtgt` hash, and forging a Golden Ticket for persistence.
+
 **Forest Escalation:** Exploiting Trust relationships and bypassing boundaries via **SID History Injection**, forging a ticket with Enterprise Admin privileges (-519).
+
 **Total Compromise:** Uploading and executing `Mimikatz` as SYSTEM to perform a DCSync attack on the root domain controller, extracting the ultimate root `krbtgt` hash.
 
 ## 🛠️ Tools Used
